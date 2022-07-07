@@ -1,25 +1,19 @@
-import { useState } from 'react'
-import { Header } from './components/Header'
-import logo from './logo.svg'
+import { Player } from './components/Player'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <Header />
+    <div className="App text-center">
+      <header className="bg-gray-700 border-b-[0.1px] border-b-sky-300">
+        <h1 className="text-4xl">Tente Nao Rir</h1>
+      </header>
       <main>
-        <div id="players">
-          <h2>Player 1</h2>
-          <h2>Player 2</h2>
-          <h2>Player 3</h2>
-        </div>
-        <div id="scores">
-          <div>0</div>
-          <div>1</div>
-          <div>2</div>
+        <div id="players" className="inline-flex text-4xl gap-4">
+          <Player />
+          <Player />
+          <Player />
         </div>
       </main>
+      <div className="res"></div>
     </div>
   )
 }
