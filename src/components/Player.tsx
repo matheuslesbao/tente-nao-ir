@@ -11,6 +11,9 @@ export function Player() {
   function increaseCount() {
     return setCount(count + 1)
   }
+  function resetCount() {
+    return setCount(count - count)
+  }
 
   return (
     <div className="m-4w-full ">
@@ -19,6 +22,7 @@ export function Player() {
         <span className="text-9xl">{count}</span>
       </div>
       <Button onClick={increaseCount} name="Riu de mais" />
+      <Button onClick={resetCount} name="Reset" />
     </div>
   )
 }
