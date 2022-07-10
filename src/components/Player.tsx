@@ -7,7 +7,6 @@ interface IPlayers {
 
 export function Player() {
   const [count, setCount] = useState(0)
-
   function increaseCount() {
     return setCount(count + 1)
   }
@@ -21,8 +20,17 @@ export function Player() {
       <div className="my-4 py-2 text-6xl border-dashed border-2 border-sky-500 ">
         <span className="text-9xl">{count}</span>
       </div>
-      <Button onClick={increaseCount} name="Riu de mais" />
-      <Button onClick={resetCount} name="Reset" />
+      <Button
+        onClick={increaseCount}
+        name="Riu de mais"
+        disabled={count == 10 ? true : false}
+      />
+
+      <Button
+        onClick={resetCount}
+        name="Reset"
+        disabled={count > 9 ? false : true}
+      />
     </div>
   )
 }
