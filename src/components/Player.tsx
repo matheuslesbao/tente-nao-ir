@@ -38,13 +38,13 @@ export function Player(props: IPlayers) {
       <Button
         onClick={increaseCount}
         name="Riu de mais"
-        disabled={count == 10 ? true : false}
+        disabled={count > 6 ? true : false}
       />
 
       <Button
         onClick={resetCount}
         name="Reset"
-        disabled={count > 9 ? false : true}
+        disabled={count > 6 ? false : true}
       />
     </div>
   )

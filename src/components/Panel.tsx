@@ -1,15 +1,12 @@
 import { useState } from 'react'
 import { FaPlusCircle } from 'react-icons/fa'
 
-interface IMaxPt {
-  name: any
-}
 export type Points = {
   points?: number
 }
 
 export function Panel({ points }: Points) {
-  const [maxPoints, setMaxPoints] = useState<any>(10)
+  const [maxPoints, setMaxPoints] = useState<any>(7)
   points = maxPoints
 
   return (
