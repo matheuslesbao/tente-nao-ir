@@ -11,9 +11,9 @@ function App() {
         <main>
           <Panel />
           <div id="players" className="inline-flex text-4xl gap-4 mt-3">
-            <Player />
-            <Player />
-            <Player />
+            <Player children="Player 1" />
+            <Player children="Player 2" />
+            <Player children="Player 3" />
           </div>
         </main>
       </div>
